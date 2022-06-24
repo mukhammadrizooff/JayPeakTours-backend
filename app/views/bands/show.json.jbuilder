@@ -1,1 +1,1 @@
-json.partial! "bands/band", band: @band
+json.partial! 'bands/band', band: @band
