@@ -3,7 +3,7 @@ class Api::V1::BookingsController < ApplicationController
     @bookings = Booking.all
     render json: @bookings
   end
-  
+
   def create
     @booking = Booking.new(booking_params)
     return render json: @booking.errors, status: :unprocessable_entity unless @booking.save
