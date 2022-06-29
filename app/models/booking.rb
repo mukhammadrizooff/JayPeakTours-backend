@@ -6,5 +6,4 @@ class Booking < ApplicationRecord
   validates :end_date, presence: true
   validates :quantity, presence: true, numericality: true, comparison: { greater_than: 0 }
   validates :total_price, presence: true, numericality: true, comparison: { greater_than: 0 }
-
 end
