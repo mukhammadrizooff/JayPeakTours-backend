@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :tours, only: %i[index show create destroy]
       resources :users, only: %i[show create]
-      resources :bookings, only: %i[index create]
+      resources :bookings, only: %i[show create]
     end
   end
 
