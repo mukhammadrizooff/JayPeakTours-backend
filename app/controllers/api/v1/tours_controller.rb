@@ -1,6 +1,6 @@
 class Api::V1::ToursController < ApplicationController
   def index
-    tours = Tour.all.order(price: :asc)
+    tours = Tour.all
     render json: tours
   end
 
@@ -10,14 +10,7 @@ class Api::V1::ToursController < ApplicationController
   end
 
   def create
-    tour = Tour.new({
-                      name: params[:name],
-                      description: params[:description],
-                      duration: params[:duration],
-                      capacity: params[:capacity],
-                      guides: params[:guides],
-                      image_url: params[:image_url]
-                    })
+    tour = Tour.new(tour_params)
 
     if tour.save
       render json: tour
@@ -33,5 +26,11 @@ class Api::V1::ToursController < ApplicationController
     else
       render json: { response: 'Error deleting tour item' }
     end
+  end
+
+  private
+
+  def tour_params
+    params.require(:tour).permit(:name, :description, :duration, :capacity, :guides, :lodging, :difficulty, :price, :image_url)
   end
 end
