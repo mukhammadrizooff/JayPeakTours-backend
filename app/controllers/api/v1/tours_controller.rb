@@ -31,6 +31,7 @@ class Api::V1::ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:name, :description, :duration, :capacity, :guides, :lodging, :difficulty, :price, :image_url)
+    params.require(:tour).permit(:name, :description, :duration, :capacity, :guides, :lodging, :difficulty, :price,
+                                 :image_url)
   end
 end
