@@ -26,7 +26,7 @@ development:
   database: Vermont_backend_development
   host: 127.0.0.1
   username: postgres
-  password: mms070707
+  password: bold
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -63,7 +63,7 @@ test:
   database: Vermont_backend_test
   host: 127.0.0.1
   username: postgres
-  password: mms070707
+  password: bold
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
